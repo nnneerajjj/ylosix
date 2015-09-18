@@ -14,12 +14,24 @@ default: &default
   <<: *postgresql
 
 development:
-  url: postgres://ecommerce_user:ecommerce_pass@localhost:5432/ecommerce
-  <<: *default
+  host: ""
+  adapter: postgresql
+  encoding: unicode
+  database: ecommerce
+  pool: 5
+  timeout: 5000
+  username: neeraj
+  password:
 
 test:
-  url: postgres://ecommerce_user:ecommerce_pass@localhost:5432/ecommerce_test
-  <<: *default
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  database: ecommerce
+  pool: 5
+  timeout: 5000
+  username: neeraj
+  password:
 
 # Example URL => postgres://pgusername@localhost/development_db
 production:

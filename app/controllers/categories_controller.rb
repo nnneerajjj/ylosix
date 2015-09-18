@@ -9,6 +9,9 @@ class CategoriesController < Frontend::CommonController
   end
 
   def show
+    if @category.nil?
+        not_found
+    end
   end
 
   def tags

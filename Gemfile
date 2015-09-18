@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0'
 
-gem 'pg'
+
 
 # Use Haml
 gem 'haml'
@@ -86,3 +86,9 @@ group :development, :test, :profile do
   gem 'coveralls'
   gem 'codeclimate-test-reporter'
 end
+group :production do
+  
+  gem 'rails_12factor'
+end
+
+gem 'pg'

@@ -47,6 +47,10 @@ class ApplicationController < ActionController::Base
     resource.intern_path
   end
 
+  def not_found
+    raise ActionController::RoutingError.new('Not Found')
+  end
+
   private
 
   def set_locale
