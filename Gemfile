@@ -80,12 +80,19 @@ group :development, :test, :profile do
   # Use debugger (incompatible with Rubymine)
   # gem 'debugger'
   gem 'rubocop', '0.33.0'
-  gem 'mailcatcher'
+  #gem 'mailcatcher'
 
   gem 'simplecov'
   gem 'coveralls'
   gem 'codeclimate-test-reporter'
 end
+
+group :development, :test do
+
+  gem 'mailcatcher'
+
+end
+
 group :production do
   
   gem 'rails_12factor'

@@ -34,6 +34,6 @@ test:
   password:
 
 # Example URL => postgres://pgusername@localhost/development_db
-production:
-  url: <%= ENV['DATABASE_URL'] %>
-  <<: *default
+#production:
+#  url: <%= ENV['DATABASE_URL'] %>
+#  <<: *default

@@ -48,7 +48,7 @@ class ApplicationController < ActionController::Base
   end
 
   def not_found
-    raise ActionController::RoutingError, 'Not Found'
+    fail ActionController::RoutingError, 'Not Found'
   end
 
   private

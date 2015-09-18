@@ -11,6 +11,8 @@ class ProductsControllerTest < ActionController::TestCase
     object = products(:camera)
     get :show, slug: object.slug
     assert_response :success
+
+    expect(get :show, controller: 'products', id: 'non-existent-xyz').to raise_error(ActionController::RoutingError)
   end
 
   test 'should add to shopping cart' do

@@ -54,6 +54,7 @@ class ProductsController < Frontend::CommonController
   end
 
   def set_product
+    @product = nil
     # TODO find product by category id
     # if params[:category_slug].blank?
     #   @category = Category.find_by(slug: params[:category_slug])
