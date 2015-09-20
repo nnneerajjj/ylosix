@@ -16,7 +16,9 @@ class CategoriesControllerTest < ActionController::TestCase
     assert_response :success
 
     # TODO: check when id nil return 404 not found
-    expect(get :show, controller: 'categories', id: 'non-existent-xyz').to raise_error(ActionController::RoutingError)
+    assert_raises(ActionController::RoutingError) do
+      get :show, controller: 'categories', id: 'non-existent-id-xyz'
+    end
   end
 
   test 'should get tag' do
